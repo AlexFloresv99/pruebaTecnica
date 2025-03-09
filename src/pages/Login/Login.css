@@ -1,0 +1,127 @@
+.background {
+  width: 100%;
+  height: 100vh;
+  background: url("../../img/fondoazul.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 30vw;
+  height: 350px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.container__form {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background: transparent;
+  backdrop-filter: blur(20px);
+  color: #e4e4e4;
+}
+
+form h2 {
+  text-align: center;
+  color: #000c1c;
+}
+
+.input-box {
+  position: relative;
+  height: 50px;
+  border-bottom: 2px solid #e4e4e4;
+  margin: 30px 0;
+  color: #000c1c;
+}
+
+form .input-box:nth-child(3) {
+  margin-bottom: 0.25rem;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #000c1c;
+  font-weight: 500;
+  padding-right: 28px;
+}
+
+.container__form form input:-internal-autofill-selected {
+  background-color: transparent;
+}
+
+.form-box h2 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s ease;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box .input-icon {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 19px;
+}
+
+.remember-forgot {
+  font-size: 14.5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.remember-forgot a {
+  color: #000c1c;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background-color: #000c1c;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #e4e4e4;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+/* Responsive mobile */
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
