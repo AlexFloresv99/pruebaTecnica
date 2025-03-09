@@ -27,7 +27,6 @@ const Login: React.FC = () => {
     try {
       const urlLogin = `${LOGIN_URL}?login=${dataFormLogin.login}&pass=${dataFormLogin.pass}`;
       const response = await axios.post(urlLogin);
-      console.log("TOKEN:", response.data);
 
       const responseToken: { userToken: string } = response.data;
       // Almacena el JWT
@@ -38,7 +37,6 @@ const Login: React.FC = () => {
     } catch (error) {
       // Reiniciar el formulario (opcional)
       setDataFormLogin({ login: "", pass: "" });
-      console.log(error); // Mostrar el error del backend
     }
   };
 

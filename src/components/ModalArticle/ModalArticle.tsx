@@ -1,5 +1,5 @@
 import "./ModalArticle.css";
-import React, { useEffect, useState, useCallback } from "react"; // Import useCallback
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { ARTICULOS_URL } from "../../api/apiConfig";
@@ -8,8 +8,6 @@ import { Articulo, responseArticulos } from "../../models/articulos.ts";
 import {
   Chip,
   IconButton,
-  MenuItem,
-  Select,
   Table,
   TableBody,
   TableCell,
@@ -70,7 +68,7 @@ const ModalArticle: React.FC<ModalArticleProps> = ({
         );
         setArticulos(response.data.Items);
       } catch (err) {
-        setError("Error fetching articles");
+        setError("Error fetching articles: " + err);
       } finally {
         setLoading(false);
       }
@@ -205,22 +203,6 @@ const ModalArticle: React.FC<ModalArticleProps> = ({
         </Table>
         {loading && <LoadingTable rows={2} columns={9} />}
       </div>
-      {/* <div className="pagination">
-        <div>
-          <span>Filas por página: </span>
-          <Select
-            id="select-size-page"
-            value={pageSize}
-            label="Size"
-            size="small"
-            onChange={(e) => handleChangeRowsPerPage(e)}
-          >
-            <MenuItem value={5}>5</MenuItem>
-            <MenuItem value={10}>10</MenuItem>
-            <MenuItem value={15}>15</MenuItem>
-          </Select>
-        </div>
-      </div> */}
       {openModalProveedores && (
         <ModalProveedores
           openDialog={openModalProveedores}

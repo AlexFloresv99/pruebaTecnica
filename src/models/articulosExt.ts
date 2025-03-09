@@ -3,7 +3,7 @@ export interface ArticuloExt {
   codigo: string;
   descripcion: string;
   descripcionCorta: string;
-  descripcionAlternativa: String;
+  descripcionAlternativa: string;
   umd: number;
   activo: boolean;
   observaciones: string;

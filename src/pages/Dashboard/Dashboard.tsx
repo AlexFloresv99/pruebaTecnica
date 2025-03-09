@@ -22,7 +22,6 @@ const Dashboard: React.FC = () => {
     const loadArticles = async () => {
       try {
         const token = localStorage.getItem("token");
-        console.log("tokeeeeeen:", token);
         const config: AxiosRequestConfig = {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -39,7 +38,6 @@ const Dashboard: React.FC = () => {
           config
         );
 
-        console.log(response.data);
         setArticles(response.data.Items);
       } catch (error) {
         console.error("Error al obtener los artículos:", error);

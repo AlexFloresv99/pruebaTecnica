@@ -44,7 +44,7 @@ const ModalProveedores: React.FC<ModalProveedoresProps> = ({
         );
         setProveedores(response.data.Items);
       } catch (err) {
-        setError("Error fetching proveedores");
+        setError("Error fetching proveedores:" + err);
       } finally {
         setLoading(false);
       }
