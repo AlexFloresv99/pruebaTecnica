@@ -1,54 +1,73 @@
-# React + TypeScript + Vite
+# Pruebatecnica - Vite + React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación React construida con Vite. A continuación, se describen los pasos para configurar y ejecutar el proyecto en tu entorno local.
 
-Currently, two official plugins are available:
+## Requisitos Previos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
 
-## Expanding the ESLint configuration
+* **Node.js:** (Versión 18 o superior recomendada) - Puedes descargarlo desde [nodejs.org](https://nodejs.org/).
+* **npm** o **yarn:** (npm se instala con Node.js)
+* **Git:** (Opcional, pero recomendado para clonar el repositorio) - Puedes descargarlo desde [git-scm.com](https://git-scm.com/).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Pasos de Instalación
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1.  **Clonar el Repositorio:**
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+  Directorio del GitHub: https://github.com/AlexFloresv99/pruebaTecnica
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+2.  **Instalar Dependencias:**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+    Navega hasta el directorio del proyecto en tu terminal y ejecuta uno de los siguientes comandos para instalar las dependencias:
+
+    **Usando npm:**
+
+    ```bash
+    npm install
+    ```
+
+    **Usando yarn:**
+
+    ```bash
+    yarn install
+    ```
+
+3.  **Ejecutar el Proyecto en Modo Desarrollo:**
+
+    Una vez que las dependencias estén instaladas, puedes iniciar el servidor de desarrollo de Vite ejecutando el siguiente comando:
+
+    ```bash
+    npm run dev
+    ```
+
+    o
+
+    ```bash
+    yarn dev
+    ```
+
+    Esto iniciará el servidor de desarrollo y abrirá la aplicación en tu navegador web predeterminado. Si no se abre automáticamente, puedes acceder a la aplicación en la URL que se muestra en la terminal (normalmente `http://localhost:5173`).
+
+
+## Dependencias
+
+* **@emotion/react:** Para estilos CSS-in-JS.
+* **@emotion/styled:** Para estilos CSS-in-JS.
+* **@mui/icons-material:** Para iconos de Material UI.
+* **@mui/material:** Para componentes de Material UI.
+* **axios:** Para realizar peticiones HTTP.
+* **react:** La biblioteca React.
+* **react-dom:** Para renderizar React en el DOM.
+* **react-router-dom:** Para la navegación en la aplicación.
+
+## Dependencias de Desarrollo
+
+* **@types/react:** Tipos de TypeScript para React.
+* **@types/react-dom:** Tipos de TypeScript para React DOM.
+* **@vitejs/plugin-react:** Plugin de Vite para React.
+* **eslint:** Linter de código JavaScript.
+* **eslint-plugin-react-hooks:** Reglas de ESLint para React Hooks.
+* **eslint-plugin-react-refresh:** Reglas de ESLint para React Refresh.
+* **globals:** Para definir variables globales en ESLint.
+* **typescript:** El compilador de TypeScript.
+* **vite:** El bundler de módulos Vite.

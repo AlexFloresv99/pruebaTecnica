@@ -6,7 +6,7 @@ export interface Articulo {
   propietario_Id: number;
   descripcion: string;
   descripcionCorta: string;
-  descripcionAlternativa: String;
+  descripcionAlternativa: string;
   compactarUbicacion: boolean;
   umd: number;
   observaciones: string;

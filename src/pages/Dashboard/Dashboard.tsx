@@ -18,10 +18,6 @@ const Dashboard: React.FC = () => {
   );
   const [openModal, setOpenModal] = useState(false);
 
-  const [filtro, setFiltro] = useState({
-    /* Aquí puedes inicializar tu filtro */
-  });
-
   useEffect(() => {
     const loadArticles = async () => {
       try {
